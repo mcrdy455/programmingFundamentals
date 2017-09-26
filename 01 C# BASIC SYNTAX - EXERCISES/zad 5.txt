@@ -1,0 +1,24 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var name = Console.ReadLine();
+            int hp = int.Parse(Console.ReadLine());
+            int maxhp = int.Parse(Console.ReadLine());
+            int en = int.Parse(Console.ReadLine());
+            int maxen = int.Parse(Console.ReadLine());
+
+            Console.WriteLine($"Name: {name}");
+            Console.WriteLine("Health: |" + new string('|', hp) + new string('.', maxhp - hp) + '|');
+            Console.WriteLine("Energy: |" + new string('|', en) + new string('.', maxen - en) + '|');
+        }
+    }
+}

@@ -1,0 +1,33 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var prof = Console.ReadLine();
+            double price = double.Parse(Console.ReadLine());
+            switch (prof)
+            {
+                case "Athlete":
+                    price = price * 0.7;
+                    break;
+                case "Businessman":
+                case "Businesswoman":    
+                    break;
+                case "SoftUni Student":
+                    price = price * 1.7;
+                    break;
+                default:
+                    price = price * 1.2;
+                    break;
+            }
+            Console.WriteLine($"The {prof} has to pay {price:f2}.");
+        }
+    }
+}
